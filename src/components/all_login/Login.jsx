@@ -62,10 +62,11 @@ const Login = () => {
       const payload = {
         password: formData.password,
         email_or_phone: formData.email,
+        role: 'admin',
       };
 
       const response = await axios.post(
-        'https://brjobsedu.com/gyandhara/gyandhara_backend/api/login/',
+        'https://mahadevaaya.com/zeeproject/zeeproject_backend/api/login/',
         payload
       );
 
@@ -80,7 +81,7 @@ const Login = () => {
         alert(content.errors.loginSuccess);
 
         if (response.data.role === 'admin') {
-          navigate('/AdminDashboard');
+          navigate('/DirectorDashboard');
         } else {
           navigate('/');
         }

@@ -1,10 +1,10 @@
-import React, { createContext, useContext, useState, useMemo, useEffect } from 'react';
+import React, { createContext, useContext, useState, useMemo, useEffect, useCallback } from 'react';
 import axios from 'axios';
 
 const AuthContext = createContext(null);
 
 const STORAGE_KEY = 'gyandhara_auth';
-const API_URL = 'https://brjobsedu.com/gyandhara/gyandhara_backend/api';
+const API_URL = 'https://mahadevaaya.com/zeeproject/zeeproject_backend/api';
 
 let isRefreshing = false;
 let failedQueue = [];
@@ -93,21 +93,29 @@ export function AuthProvider({ children }) {
 
   // Restore auth state from localStorage on mount
   useEffect(() => {
-    const savedAuth = localStorage.getItem(STORAGE_KEY);
-    if (savedAuth) {
-      try {
-        const parsed = JSON.parse(savedAuth);
-        setUser(parsed.user || null);
-        setAccessToken(parsed.access || null);
-        setRefreshToken(parsed.refresh || null);
-        setRole(parsed.role || null);
-        setUniqueId(parsed.unique_id || null);
-      } catch (err) {
-        console.error('Failed to parse auth data:', err);
-        localStorage.removeItem(STORAGE_KEY);
+    const restoreAuth = async () => {
+      const savedAuth = localStorage.getItem(STORAGE_KEY);
+      if (savedAuth) {
+        try {
+          const parsed = JSON.parse(savedAuth);
+          if (parsed.refresh) {
+            setRefreshToken(parsed.refresh);
+            // Immediately try to refresh the token
+            const newAccessToken = await refreshAccessToken(parsed.refresh);
+            if (newAccessToken) {
+              setUser(parsed.user || null);
+              setRole(parsed.role || null);
+              setUniqueId(parsed.unique_id || null);
+            }
+          }
+        } catch (err) {
+          console.error('Failed to parse auth data:', err);
+          logout();
+        }
       }
-    }
-    setIsReady(true);
+      setIsReady(true);
+    };
+    restoreAuth();
   }, []);
 
   // Persist auth state to localStorage on changes
@@ -126,38 +134,51 @@ export function AuthProvider({ children }) {
     }
   }, [user, accessToken, refreshToken, role, uniqueId]);
 
-  const login = (data) => {
+  const login = useCallback((data) => {
     setUser(data.user);
     setAccessToken(data.access);
     setRefreshToken(data.refresh);
     setRole(data.role);
     setUniqueId(data.unique_id);
-  };
+  }, []);
 
-  const logout = () => {
+  const logout = useCallback(() => {
     setUser(null);
     setAccessToken(null);
     setRefreshToken(null);
     setRole(null);
     setUniqueId(null);
     localStorage.removeItem(STORAGE_KEY);
-  };
+  }, []);
 
-  const refreshAccessToken = async () => {
-    if (!refreshToken) return null;
+  const refreshAccessToken = useCallback(async (token) => {
+    const tokenToRefresh = token || refreshToken;
+    if (!tokenToRefresh) return null;
     
     try {
       const response = await axios.post(`${API_URL}/refresh-token/`, {
-        refresh: refreshToken,
+        refresh: tokenToRefresh,
       });
-      const { access } = response.data;
-      setAccessToken(access);
-      return access;
+      const { access: newAccessToken } = response.data;
+      setAccessToken(newAccessToken);
+      return newAccessToken;
     } catch (error) {
+      console.error('Failed to refresh token:', error);
       logout();
       return null;
     }
-  };
+  }, [refreshToken, logout]);
+
+  useEffect(() => {
+    if (accessToken) {
+      const interval = setInterval(() => {
+        console.log('Refreshing token...');
+        refreshAccessToken();
+      }, 2 * 60 * 1000); // 2 minutes
+
+      return () => clearInterval(interval);
+    }
+  }, [accessToken, refreshAccessToken]);
 
   const value = useMemo(() => ({
     user,
@@ -170,7 +191,7 @@ export function AuthProvider({ children }) {
     refreshAccessToken,
     isAuthenticated: !!accessToken,
     isReady,
-  }), [user, accessToken, refreshToken, role, uniqueId, isReady]);
+  }), [user, accessToken, refreshToken, role, uniqueId, isReady, login, logout, refreshAccessToken]);
 
   return (
     <AuthContext.Provider value={value}>
