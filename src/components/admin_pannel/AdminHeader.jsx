@@ -48,7 +48,7 @@ function AdminHeader({ toggleSidebar }) {
           });
         }
       } catch (err) {
-        setError("Failed to load director profile.");
+        setError("Failed to load admin profile.");
       } finally {
         setIsLoading(false);
       }
@@ -57,7 +57,7 @@ function AdminHeader({ toggleSidebar }) {
   }, []);
 
   const getDisplayName = () => {
-    return userDetails.full_name || "Director User";
+    return userDetails.full_name || "Admin";
   };
 
   const getUserPhotoUrl = () => {
