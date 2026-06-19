@@ -43,54 +43,59 @@ const AdminDashboard = () => {
 
          <Container fluid className="dashboard-box mt-3">
           <div className="admin-dashboard">
-            <h2 className="dashboard-title py-3">Dashboard</h2>
-            <Row>
-              <Col md={6} xl={4} className="mb-4">
-                <Card className="dashboard-card h-100">
-                  <Card.Body>
-                    <div className="d-flex align-items-center">
-                      <div className="card-icon-container bg-primary text-white">
-                        <FaCogs size={30} />
+            <Row className="g-4">
+              <Col md={6} xl={4}>
+                <div className="card-wrapper">
+                  <Card className="dashboard-card card-services h-100">
+                    <Card.Body>
+                      <div className="d-flex align-items-center">
+                        <div className="dashboard-card-icon services-icon">
+                          <FaCogs size={24} />
+                        </div>
+                        <div className="ms-3 text-start">
+                          <p className="dashboard-card-title mb-0">Total Services</p>
+                          <h4 className="dashboard-card-value mb-0">15</h4>
+                        </div>
                       </div>
-                      <div className="ms-3">
-                        <p className="text-muted mb-0">Total Services</p>
-                        <h4 className="mb-0 fw-bold">15</h4>
-                      </div>
-                    </div>
-                  </Card.Body>
-                </Card>
+                    </Card.Body>
+                  </Card>
+                </div>
               </Col>
 
-              <Col md={6} xl={4} className="mb-4">
-                <Card className="dashboard-card h-100">
-                  <Card.Body>
-                    <div className="d-flex align-items-center">
-                      <div className="card-icon-container bg-success text-white">
-                        <FaProjectDiagram size={30} />
+              <Col md={6} xl={4}>
+                <div className="card-wrapper">
+                  <Card className="dashboard-card card-projects h-100">
+                    <Card.Body>
+                      <div className="d-flex align-items-center">
+                        <div className="dashboard-card-icon projects-icon">
+                          <FaProjectDiagram size={24} />
+                        </div>
+                        <div className="ms-3 text-start">
+                          <p className="dashboard-card-title mb-0">Total Projects</p>
+                          <h4 className="dashboard-card-value mb-0">25</h4>
+                        </div>
                       </div>
-                      <div className="ms-3">
-                        <p className="text-muted mb-0">Total Projects</p>
-                        <h4 className="mb-0 fw-bold">25</h4>
-                      </div>
-                    </div>
-                  </Card.Body>
-                </Card>
+                    </Card.Body>
+                  </Card>
+                </div>
               </Col>
 
-              <Col md={6} xl={4} className="mb-4">
-                <Card className="dashboard-card h-100">
-                  <Card.Body>
-                    <div className="d-flex align-items-center">
-                      <div className="card-icon-container bg-warning text-white">
-                        <FaBoxOpen size={30} />
+              <Col md={6} xl={4}>
+                <div className="card-wrapper">
+                  <Card className="dashboard-card card-products h-100">
+                    <Card.Body>
+                      <div className="d-flex align-items-center">
+                        <div className="dashboard-card-icon products-icon">
+                          <FaBoxOpen size={24} />
+                        </div>
+                        <div className="ms-3 text-start">
+                          <p className="dashboard-card-title mb-0">Total Products</p>
+                          <h4 className="dashboard-card-value mb-0">50</h4>
+                        </div>
                       </div>
-                      <div className="ms-3">
-                        <p className="text-muted mb-0">Total Products</p>
-                        <h4 className="mb-0 fw-bold">50</h4>
-                      </div>
-                    </div>
-                  </Card.Body>
-                </Card>
+                    </Card.Body>
+                  </Card>
+                </div>
               </Col>
             </Row>
             {/* You can add more dashboard components here */}

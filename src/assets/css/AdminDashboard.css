@@ -1,29 +1,107 @@
 .admin-dashboard {
-    padding: 20px;
-    background-color: #f8f9fa;
+  padding: 20px;
+  background-color: #f8f9fa;
 }
 
 .dashboard-title {
-    color: #343a40;
+  color: #343a40;
+  font-weight: 700;
+}
+
+/* Card Wrapper for animations and hover effects */
+.card-wrapper {
+  transition: all 0.3s ease-in-out;
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.card-wrapper:hover {
+  transform: translateY(-8px);
 }
 
 .dashboard-card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
 }
 
 .dashboard-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  border-color: transparent;
 }
 
-.card-icon-container {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Staggered animation delays */
+.col:nth-child(1) .card-wrapper {
+  animation-delay: 0.1s;
+}
+.col:nth-child(2) .card-wrapper {
+  animation-delay: 0.2s;
+}
+.col:nth-child(3) .card-wrapper {
+  animation-delay: 0.3s;
+}
+
+/* Card Icon Styles */
+.dashboard-card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.services-icon {
+  background: linear-gradient(135deg, #0d6efd, #0a58ca);
+}
+
+.projects-icon {
+  background: linear-gradient(135deg, #198754, #146c43);
+}
+
+.products-icon {
+  background: linear-gradient(135deg, #ffc107, #d39e00);
+}
+
+/* Card Text Styles */
+.dashboard-card-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #6c757d;
+}
+
+.dashboard-card-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #343a40;
+}
+
+/* Animation Definition */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Override conflicting styles from AdminLeftnav.css if necessary */
+.dashboard-card .card-body {
+  padding: 1.25rem;
+  text-align: left;
+  display: block;
+}
+
+.dashboard-card:hover::before {
+  transform: scaleX(0); /* Disable the line animation from the other file */
 }
