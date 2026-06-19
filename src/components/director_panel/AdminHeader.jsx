@@ -20,7 +20,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 
-function DirectorHeader({ toggleSidebar }) {
+function AdminHeader({ toggleSidebar }) {
   const navigate = useNavigate();
 
   // State to track if the API itself failed (404/500)
@@ -153,4 +153,4 @@ function DirectorHeader({ toggleSidebar }) {
     );
   }
   
-  export default DirectorHeader;
+  export default AdminHeader;

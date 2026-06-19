@@ -17,13 +17,13 @@ import { AuthProvider } from './components/all_login/AuthContext';
 import NavBar from './components/nav_bar/NavBar';
 import Login from "./components/all_login/Login";
 
-import DirectorDashboard from "./components/director_panel/DirectorDashboard";
+import AdminDashboard from "./components/director_panel/AdminDashboard";
 
 
 function AppContent() {
   const location = useLocation();
 
-  const hideNavbarRoutes = [ "/DirectorDashboard"];
+  const hideNavbarRoutes = [ "/AdminDashboard"];
   const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
 
   return (
@@ -32,7 +32,7 @@ function AppContent() {
       <Routes>
           <Route path="/" element={<Home />} />
 
-          <Route path="/DirectorDashboard" element={<DirectorDashboard />} />
+          <Route path="/AdminDashboard" element={<AdminDashboard />} />
           <Route path="/Login" element={<Login />} />
           
         </Routes>

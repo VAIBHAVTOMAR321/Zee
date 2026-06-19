@@ -81,7 +81,7 @@ const Login = () => {
         alert(content.errors.loginSuccess);
 
         if (response.data.role === 'admin') {
-          navigate('/DirectorDashboard');
+          navigate('/AdminDashboard');
         } else {
           navigate('/');
         }

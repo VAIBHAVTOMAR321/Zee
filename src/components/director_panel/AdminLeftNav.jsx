@@ -31,7 +31,7 @@ import {
 } from "react-icons/fa";
 import axios from "axios";
 
-import "../../assets/css/directorleftnav.css";
+import "../../assets/css/adminleftnav.css";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import {
   FaInfoCircle,
@@ -42,7 +42,7 @@ import {
 import { useAuth } from "../all_login/AuthContext";
 
 
-const DirectorLeftNav = ({ sidebarOpen, setSidebarOpen, isMobile, isTablet, onNavClick }) => {
+const AdminLeftnav = ({ sidebarOpen, setSidebarOpen, isMobile, isTablet, onNavClick }) => {
   const { logout, user } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
@@ -117,7 +117,7 @@ const DirectorLeftNav = ({ sidebarOpen, setSidebarOpen, isMobile, isTablet, onNa
           {sidebarOpen ? (
             <div className="logo-container">
               <div className="logo">
-                  Director Panel
+                  Admin Panel
               </div>
             </div>
           ) : (
@@ -264,4 +264,4 @@ const DirectorLeftNav = ({ sidebarOpen, setSidebarOpen, isMobile, isTablet, onNa
   );
 };
 
-export default DirectorLeftNav;
+export default AdminLeftnav;
