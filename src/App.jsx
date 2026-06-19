@@ -17,7 +17,7 @@ import { AuthProvider } from './components/all_login/AuthContext';
 import NavBar from './components/nav_bar/NavBar';
 import Login from "./components/all_login/Login";
 
-import AdminDashboard from "./components/director_panel/AdminDashboard";
+import AdminDashboard from "./components/admin_pannel/AdminDashboard";
 
 
 function AppContent() {
