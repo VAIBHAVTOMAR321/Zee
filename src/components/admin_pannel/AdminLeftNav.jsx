@@ -11,7 +11,7 @@ import {
   FaBuilding,
   FaImage,
   FaTools,
-  FaComments,
+  FaComments, 
   FaCube,
   FaProjectDiagram,
   FaServer,
@@ -74,22 +74,24 @@ const AdminLeftnav = ({ sidebarOpen, setSidebarOpen, isMobile, isTablet, onNavCl
       {
         icon: <FaTachometerAlt />,
         label: "DashBoard",
-        path: "/SupervisorDashBoard",
+        path: "/AdminDashboard",
         active: true,
       },
-    
-     
-  {
-    icon: <FaUsers />,
-    label: "test",
-    submenu: [
       {
-        label: "Registered Student",
-        path: "#",
-        icon: <FaPlusSquare />,
+        icon: <FaServer />,
+        label: "All Services",
+        path: "/AllServices",
       },
-    ],
-  },
+      {
+        icon: <FaCube />,
+        label: "Our Products",
+        path: "/AllProducts",
+      },
+      {
+        icon: <FaProjectDiagram />,
+        label: "Our Projects",
+        path: "/AllProjects",
+      },
        {
    icon: <FaClock />,
    label: "Time Schedule",

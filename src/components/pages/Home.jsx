@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Carousel, Card, Button, Spinner } from "react-bootstrap";
-import axios from "axios";
+import axios from 'axios';
 import { 
   FaRocket, FaEye, FaBriefcase, FaUserCheck, 
   FaChartLine, FaQuoteLeft, FaFacebook, FaTwitter, FaLinkedin, 
@@ -20,6 +20,8 @@ function Home() {
     projects: []
   });
 
+  const MEDIA_BASE_URL = "https://mahadevaaya.com/zeeproject/zeeproject_backend";
+
   useEffect(() => {
     const fetchHomeContent = async () => {
       try {
@@ -27,46 +29,36 @@ function Home() {
         // const response = await axios.get('/api/v1/company/assets');
         
         // Simulated fetching delay
-        const mockData = {
-          heroSlides: [
-            {
-              id: 1,
-              title: "Zee Zero Enterprises",
-              subtitle: "Empowering Businesses with Strategic Innovation and Global Excellence.",
-              image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070",
-              btnText: "Explore Services"
-            },
-            {
-              id: 2,
-              title: "Visionary Leadership",
-              subtitle: "Pioneering tomorrow's business solutions today with integrity and precision.",
-              image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2069",
-              btnText: "Contact Us Today"
-            }
-          ],
-          aboutImage: "https://images.unsplash.com/photo-1522071823991-b5182991e38f?auto=format&fit=crop&q=80&w=2070",
-          services: [
-            { title: "Strategic Planning", icon: <FaChartLine />, desc: "Tailored strategies to navigate market complexities and drive profitability." },
-            { title: "Project Management", icon: <FaBriefcase />, desc: "End-to-end delivery of complex industrial and corporate projects." },
-            { title: "Digital Transformation", icon: <FaGlobe />, desc: "Modernizing your business with cutting-edge digital infrastructure." },
-            { title: "HR & Talent Management", icon: <FaUserCheck />, desc: "Optimizing your workforce through strategic recruitment and training." }
-          ],
-          products: [
-            { title: "Enterprise Software", icon: <FaCube />, desc: "Robust ERP and CRM solutions tailored for large-scale operations.", img: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2070" },
-            { title: "Industrial Equipment", icon: <FaIndustry />, desc: "High-performance machinery and tools for modern manufacturing.", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070" },
-            { title: "Network Hardware", icon: <FaServer />, desc: "Secure and scalable server solutions for global data management.", img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=2070" },
-            { title: "Smart Safety Systems", icon: <FaTools />, desc: "Advanced AI-driven security and safety monitoring products.", img: "https://images.unsplash.com/photo-1557597774-9d2739f85a94?auto=format&fit=crop&q=80&w=2070" }
-          ],
-          projects: [
-            { title: "Metro Infrastructure", cat: "Engineering", img: "https://images.unsplash.com/photo-1454165833767-027ff8af996a?auto=format&fit=crop&q=80&w=2070" },
-            { title: "Sustainable Energy", cat: "Green Tech", img: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=2070" },
-            { title: "Corporate HQ", cat: "Architecture", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070" }
-          ]
-        };
+        const [servicesRes, productsRes, projectsRes] = await Promise.all([
+          axios.get("https://mahadevaaya.com/zeeproject/zeeproject_backend/api/zee-service/"),
+          axios.get("https://mahadevaaya.com/zeeproject/zeeproject_backend/api/zee-product/"),
+          axios.get("https://mahadevaaya.com/zeeproject/zeeproject_backend/api/zee-project/")
+        ]);
 
-        setPageData(mockData);
+        setPageData({
+          heroSlides: [
+             {
+               id: 1,
+               title: "Zee Zero Enterprises",
+               subtitle: "Empowering Businesses with Strategic Innovation and Global Excellence.",
+               image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070",
+               btnText: "Explore Services"
+             },
+             {
+               id: 2,
+               title: "Visionary Leadership",
+               subtitle: "Pioneering tomorrow's business solutions today with integrity and precision.",
+               image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2069",
+               btnText: "Contact Us Today"
+             }
+           ],
+           aboutImage: "https://images.unsplash.com/photo-1522071823991-b5182991e38f?auto=format&fit=crop&q=80&w=2070",
+          services: servicesRes.data.success ? servicesRes.data.data : [],
+          products: productsRes.data.success ? productsRes.data.data : [],
+          projects: projectsRes.data.success ? projectsRes.data.data : [],
+        });
       } catch (err) {
-        console.error("Failed to fetch company images", err);
+        console.error("Failed to fetch home page data", err);
       } finally {
         setLoading(false);
       }
@@ -187,9 +179,9 @@ function Home() {
           <Row>
             {pageData.services.map((service, idx) => (
               <Col md={6} lg={3} key={idx} className="mb-4">
-                <Card className="service-card border-0 shadow-sm h-100 text-center p-3">
+                <Card className="service-card border-0 shadow-sm h-100 text-center p-3" key={service.id}>
                   <Card.Body>
-                    <div className="service-icon-box mb-4">{service.icon}</div>
+                    <div className="service-icon-box mb-4"><FaBriefcase /></div>
                     <h4 className="fw-bold mb-3">{service.title}</h4>
                     <p className="text-muted small mb-0">{service.desc}</p>
                   </Card.Body>
@@ -211,19 +203,19 @@ function Home() {
           <Row>
             {pageData.products.map((product, idx) => (
               <Col md={6} lg={3} key={idx} className="mb-4">
-                <Card className="product-card border-0 shadow-sm h-100 text-center p-3">
+                <Card className="product-card border-0 shadow-sm h-100 text-center p-3" key={product.id}>
                   <div className="product-img-wrapper">
                     <img 
-                      src={product.img} 
-                      alt={product.title} 
+                      src={product.prod_img ? `${MEDIA_BASE_URL}${product.prod_img}` : "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2070"} 
+                      alt={product.prod_title} 
                       className="img-fluid" 
                       onError={handleImageError}
                     />
                   </div>
                   <div className="product-content-overlay">
-                    <div className="product-icon-box">{product.icon}</div>
-                    <h4 className="product-title">{product.title}</h4>
-                    <p className="product-desc">{product.desc}</p>
+                    <div className="product-icon-box"><FaCube /></div>
+                    <h4 className="product-title">{product.prod_title}</h4>
+                    <p className="product-desc">{product.prod_desc}</p>
                   </div>
                 </Card>
               </Col>
@@ -242,18 +234,18 @@ function Home() {
           </div>
           <Row className="g-4">
             {pageData.projects.map((p, i) => (
-              <Col md={4} key={i}>
+              <Col md={4} key={p.id}>
                 <div className="project-card overflow-hidden rounded-3 shadow-sm">
                   <div className="project-img-container">
                     <img 
-                      src={p.img} 
-                      alt={p.title} 
+                      src={p.pro_img ? `${MEDIA_BASE_URL}${p.pro_img}` : "https://images.unsplash.com/photo-1454165833767-027ff8af996a?auto=format&fit=crop&q=80&w=2070"} 
+                      alt={p.pro_title} 
                       className="img-fluid" 
                       onError={handleImageError}
                     />
                     <div className="project-hover-info p-4">
-                      <h5 className="text-white mb-1">{p.title}</h5>
-                      <p className="text-white-50 small mb-0">{p.cat}</p>
+                      <h5 className="text-white mb-1">{p.pro_title}</h5>
+                      <p className="text-white-50 small mb-0">{p.pro_desc}</p>
                     </div>
                   </div>
                 </div>

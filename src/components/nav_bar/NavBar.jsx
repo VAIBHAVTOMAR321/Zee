@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../all_login/LanguageContext";
 
 import "../../assets/css/navbar.css";
-import ukLogo from "../../assets/images/uk_logo.png";
+import ukLogo from "../../assets/images/zeepnglogo.png";
 
 function NavBar() {
   const [expanded, setExpanded] = useState(false);
@@ -22,9 +22,9 @@ function NavBar() {
             alt="UK Logo" 
             className="navbar-logo"
           />
-          <span className="brand-text">
+          {/* <span className="brand-text">
             {language === 'hi' ? '' : 'Logo'}
-          </span>
+          </span> */}
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-toggler-custom">
@@ -40,27 +40,27 @@ function NavBar() {
               {language === 'hi' ? 'होम' : 'Home'}
             </Nav.Link>
 
-            <Nav.Link href="#about" className="nav-link-item" onClick={() => setExpanded(false)}>
+            <Nav.Link as={Link} to="/about" className="nav-link-item" onClick={() => setExpanded(false)}>
               <span className="nav-link-dot"></span>
               {language === 'hi' ? 'हमारे बारे में' : 'About Us'}
             </Nav.Link>
 
-            <Nav.Link href="#services" className="nav-link-item" onClick={() => setExpanded(false)}>
+            <Nav.Link as={Link} to="/services" className="nav-link-item" onClick={() => setExpanded(false)}>
               <span className="nav-link-dot"></span>
               {language === 'hi' ? 'सेवाएं' : 'Services'}
             </Nav.Link>
 
-            <Nav.Link href="#products" className="nav-link-item" onClick={() => setExpanded(false)}>
+            <Nav.Link as={Link} to="/products" className="nav-link-item" onClick={() => setExpanded(false)}>
               <span className="nav-link-dot"></span>
               {language === 'hi' ? 'उत्पाद' : 'Products'}
             </Nav.Link>
 
-            <Nav.Link href="#projects" className="nav-link-item" onClick={() => setExpanded(false)}>
+            <Nav.Link as={Link} to="/projects" className="nav-link-item" onClick={() => setExpanded(false)}>
               <span className="nav-link-dot"></span>
               {language === 'hi' ? 'प्रोजेक्ट्स' : 'Projects'}
             </Nav.Link>
 
-            <Nav.Link href="#contact" className="nav-link-item" onClick={() => setExpanded(false)}>
+            <Nav.Link as={Link} to="/contact" className="nav-link-item" onClick={() => setExpanded(false)}>
               <span className="nav-link-dot"></span>
               {language === 'hi' ? 'संपर्क करें' : 'Contact'}
             </Nav.Link>

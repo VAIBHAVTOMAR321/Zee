@@ -1,0 +1,26 @@
+.projects-table .desc-cell {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.projects-table th,
+.projects-table td {
+  vertical-align: middle;
+}
+
+.card-header h4 {
+  font-weight: 600;
+  color: #333;
+}
+
+.projects-table .btn-sm {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+}
+
+.projects-table .btn-sm:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
