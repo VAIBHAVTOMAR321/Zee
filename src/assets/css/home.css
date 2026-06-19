@@ -1,0 +1,384 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #0a1931;
+  --secondary-color: #185adb;
+  --accent-color: #ff914d;
+  --text-dark: #1a1a2e;
+  --text-muted: #6c757d;
+  --white: #ffffff;
+  --bg-light: #f8fafc;
+}
+
+.home-wrapper {
+  overflow-x: hidden;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: var(--text-dark);
+}
+
+/* Hero Section */
+.hero-section .carousel-item {
+  height: 90vh;
+  min-height: 600px;
+  overflow: hidden; /* Prevents zoomed images from spilling out */
+}
+
+.hero-img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  transform: scale(1);
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Ken Burns Effect - Triggers when the slide becomes active */
+.carousel-item.active .hero-img {
+  animation: kenBurnsZoom 20s ease-out forwards;
+}
+
+@keyframes kenBurnsZoom {
+  from {
+    transform: scale(1);
+    filter: brightness(0.8);
+  }
+  to {
+    transform: scale(1.12);
+    filter: brightness(1);
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(10, 25, 49, 0.9) 0%, rgba(10, 25, 49, 0.4) 100%);
+  z-index: 1;
+}
+
+.hero-caption {
+  z-index: 2;
+  bottom: 30% !important;
+  text-align: left !important;
+  left: 10% !important;
+  right: 10% !important;
+  max-width: 800px;
+}
+
+.hero-caption h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  color: var(--white);
+}
+
+.hero-caption p {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  margin-bottom: 35px;
+  opacity: 0.9;
+  color: var(--white);
+}
+
+.btn-premium {
+  background-color: var(--secondary-color) !important;
+  border: none !important;
+  padding: 14px 35px !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  color: white !important;
+}
+
+.btn-premium:hover {
+  background-color: #1248af !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-premium-outline {
+  border: 2px solid var(--white) !important;
+  background: transparent !important;
+  padding: 12px 35px !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-premium-outline:hover {
+  background-color: var(--white) !important;
+  color: var(--primary-color) !important;
+}
+
+/* Section Styling */
+.section-header .subtitle {
+  color: var(--secondary-color);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.title-bar {
+  width: 60px;
+  height: 5px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  margin-bottom: 35px;
+}
+
+/* About Us */
+.about-card {
+  padding: 25px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.about-icon {
+  font-size: 2.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.about-image-stack {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--secondary-color);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 15px 35px rgba(24, 90, 219, 0.3);
+}
+
+.experience-badge .years {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Services */
+.service-card {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: none;
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1) !important;
+}
+
+.service-icon-box {
+  width: 70px;
+  height: 70px;
+  background: rgba(24, 90, 219, 0.1);
+  color: var(--secondary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto;
+}
+
+/* Products */
+.product-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: none;
+  background-color: var(--white);
+  border-radius: 12px; /* Ensure rounded corners for the card */
+  min-height: 280px; /* Give cards a consistent height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to the bottom */
+}
+
+.product-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1) !important;
+  border-color: var(--accent-color); /* Highlight on hover */
+}
+
+.product-img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.product-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-img-wrapper img {
+  transform: scale(1.1);
+}
+
+.product-content-overlay {
+  position: relative; /* Changed from absolute to relative to stack on top of image */
+  z-index: 1;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(10, 25, 49, 0.9) 0%, rgba(10, 25, 49, 0.6) 50%, rgba(10, 25, 49, 0) 100%);
+  color: var(--white);
+  text-align: center;
+}
+
+.product-icon-box {
+  background: rgba(255, 145, 77, 0.1);
+  color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto;
+  width: 60px; /* Smaller icon box for overlay */
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.product-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  color: var(--white);
+}
+
+/* Projects Section */
+.project-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.project-img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-img-container img {
+  transition: transform 0.6s ease;
+}
+
+.project-hover-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 49, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-hover-info {
+  opacity: 1;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Why Choose Us */
+.why-us-section {
+  background: linear-gradient(rgba(10, 25, 49, 0.95), rgba(10, 25, 49, 0.95)), 
+              url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2070');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.counter-val {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent-color);
+}
+
+/* CTA Section */
+.cta-box {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1e3a8a 100%);
+  color: white;
+}
+
+/* Footer Socials */
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  background: white;
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.footer-socials a:hover {
+  background: var(--secondary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Scroll To Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-5px);
+}
