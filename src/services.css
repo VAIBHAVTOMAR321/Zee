@@ -67,6 +67,11 @@
     box-shadow: 0 4px 15px rgba(0,0,0,0.08) !important;
 }
 
+.service-card-img {
+    height: 180px;
+    object-fit: cover;
+}
+
 .service-item-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
