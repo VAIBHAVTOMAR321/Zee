@@ -10,7 +10,7 @@
     position: relative;
     background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070') no-repeat center center;
     background-size: cover;
-    min-height: 70vh;
+    min-height: 55vh;
     display: flex;
     align-items: center;
 }

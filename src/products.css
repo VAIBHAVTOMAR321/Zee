@@ -1,14 +1,70 @@
+:root {
+  --primary: #E31E24;
+  --primary-dark: #C4141A;
+  --secondary: #1F2937;
+  --accent: #F59E0B;
+  --light: #F8FAFC;
+}
+
 .products-hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?auto=format&fit=crop&q=80&w=2070') no-repeat center center;
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?auto=format&fit=crop&q=80&w=2070') no-repeat center center;
     background-size: cover;
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+}
+
+.products-hero-section .hero-overlay {
+    position: absolute;
+    inset: 0;
+   background: linear-gradient(135deg, rgba(35, 31, 31, 0.9) 0%, rgba(227, 30, 36, 0.4) 100%);
+    z-index: 1;
+}
+
+.products-hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.products-hero-section h1,
+.products-hero-section .lead {
+    color: var(--light);
+}
+
+.products-page .section-title {
+    color: var(--secondary);
+}
+
+.products-page h2.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.products-page h2.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.products-subtitle {
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 
 .product-item-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: none;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-left: 3px solid var(--primary);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08) !important;
 }
 
 .product-item-card:hover {
@@ -19,4 +75,17 @@
 .product-item-card .card-img-top {
     height: 200px;
     object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-item-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.products-page h2 {
+    color: var(--secondary);
+}
+
+.products-page .text-primary {
+    color: var(--primary) !important;
 }
