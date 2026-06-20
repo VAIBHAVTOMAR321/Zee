@@ -31,17 +31,22 @@ const Services = () => {
 
   return (
     <div className="services-page">
-      <header className="services-hero-section text-center text-white py-5">
-        <Container>
-          <h1 className="display-5 fw-bold">Our Services</h1>
-          <p className="lead">
+      <header className="services-hero-section py-5">
+        <div className="hero-overlay"></div>
+        <Container className="position-relative z-2">
+          <h1 className="display-4 fw-bold mb-3">Our Services</h1>
+          <p className="lead fs-5 mb-0">
             Delivering excellence and value through our comprehensive solutions.
           </p>
         </Container>
       </header>
 
-      <section className="py-5">
+      <section className="py-5 bg-light">
         <Container>
+          <div className="text-center mb-5">
+            <h2 className="fw-bold section-title">Our Services</h2>
+            <p className="lead services-subtitle">Delivering excellence and value through our comprehensive solutions.</p>
+          </div>
           {loading ? (
             <div className="text-center">
               <Spinner animation="border" variant="primary" />
@@ -53,7 +58,7 @@ const Services = () => {
             <Row className="g-4">
               {services.map(service => (
                 <Col lg={4} md={6} key={service.id}>
-                  <Card className="h-100 service-item-card border-0 shadow-sm text-center p-4">
+                  <Card className="h-100 service-item-card text-center p-4">
                     <Card.Body>
                       <div className="service-icon-wrapper mb-4">
                         <FaBriefcase size={40} />
