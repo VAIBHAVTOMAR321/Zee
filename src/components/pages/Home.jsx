@@ -196,7 +196,7 @@ Our team has develop too many application according to client needs.</p>
                     />
                   </div>
                   <Card.Body className="text-center">
-                    <div className="product-icon-box mb-3"><FaCube /></div>
+                    {/* <div className="product-icon-box mb-3"><FaCube /></div> */}
                     <Card.Title className="product-title">{product.prod_title}</Card.Title>
                     <Card.Text className="product-desc text-muted">{product.prod_desc}</Card.Text>
                   </Card.Body>
