@@ -125,7 +125,7 @@ function Home() {
       <section id="about" className="about-section py-5">
         <Container>
           <Row className="align-items-center">
-            <Col lg={6} className="mb-4 mb-lg-0">
+            <Col lg={6} className="mb-4 mb-lg-0 about-style">
               <div className="section-header text-start">
                 <span className="subtitle">ABOUT OUR COMPANY</span>
                 <h2 className="">Redefining Corporate Standards</h2>
@@ -178,7 +178,7 @@ function Home() {
           </div>
           <Row>
             {pageData.services.map((service, idx) => (
-              <Col md={6} lg={3} key={idx} className="mb-4">
+              <Col md={6} lg={3} key={idx} className="mb-4 about-style">
                 <Card className="service-card border-0 shadow-sm h-100  p-3" key={service.id}>
                   <Card.Body>
                     <div className="service-icon-box mb-4"><FaBriefcase /></div>
@@ -202,7 +202,7 @@ function Home() {
           </div>
           <Row>
             {pageData.products.map((product, idx) => (
-              <Col md={6} lg={3} key={idx} className="mb-4">
+              <Col md={6} lg={3} key={idx} className="mb-4 about-style">
                 <Card className="product-card border-0 shadow-sm h-100 text-center p-3" key={product.id}>
                   <div className="product-img-wrapper">
                     <img 

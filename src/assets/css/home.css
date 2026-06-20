@@ -138,6 +138,10 @@ html {
   background-color: var(--primary);
   border-radius: 10px;
   margin-bottom: 35px;
+  margin-left: 270px;
+}
+.about-style p{
+  text-align: justify;
 }
 
 /* About Us */
