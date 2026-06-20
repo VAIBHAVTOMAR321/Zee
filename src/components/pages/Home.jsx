@@ -298,7 +298,6 @@ function Home() {
         </Container>
       </section>
 
-  
 
       {/* Scroll To Top Button */}
       <button 
