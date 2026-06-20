@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Carousel, Card, Button, Spinner } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import { 
   FaRocket, FaEye, FaBriefcase, FaUserCheck, 
@@ -98,7 +99,7 @@ function Home() {
 
   return (
     <div className="home-wrapper">
-      {/* Hero Carousel Section */}
+{/* Hero Carousel Section */}
       <section className="hero-section">
         <Carousel fade interval={6000} controls={true} indicators={true}>
           {pageData.heroSlides.map((slide) => (
@@ -114,7 +115,7 @@ function Home() {
                 <h1 className="animate-fade-in-down">{slide.title}</h1>
                 <p className="animate-fade-in-up">{slide.subtitle}</p>
                 <div className="hero-btns animate-fade-in-up">
-                  <Button className="btn-premium">{slide.btnText}</Button>
+                  <Link to={slide.btnText === "Explore Services" ? "/services" : "/contact"} className="btn btn-premium">{slide.btnText}</Link>
                 </div>
               </Carousel.Caption>
             </Carousel.Item>
@@ -185,7 +186,7 @@ Our team has develop too many application according to client needs.</p>
           <Row>
             {pageData.products.map((product, idx) => (
               <Col md={6} lg={3} key={idx} className="mb-4 about-style">
-                <Card className="product-card border-0 shadow-sm h-100 text-center p-3" key={product.id}>
+                <Card className="product-card h-100 border-0 shadow-sm p-3">
                   <div className="product-img-wrapper">
                     <img 
                       src={product.prod_img ? `${MEDIA_BASE_URL}${product.prod_img}` : "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2070"} 
@@ -194,11 +195,11 @@ Our team has develop too many application according to client needs.</p>
                       onError={handleImageError}
                     />
                   </div>
-                  <div className="product-content-overlay">
-                    <div className="product-icon-box"><FaCube /></div>
-                    <h4 className="product-title">{product.prod_title}</h4>
-                    <p className="product-desc">{product.prod_desc}</p>
-                  </div>
+                  <Card.Body className="text-center">
+                    <div className="product-icon-box mb-3"><FaCube /></div>
+                    <Card.Title className="product-title">{product.prod_title}</Card.Title>
+                    <Card.Text className="product-desc text-muted">{product.prod_desc}</Card.Text>
+                  </Card.Body>
                 </Card>
               </Col>
             ))}
@@ -294,7 +295,7 @@ Our team has develop too many application according to client needs.</p>
           <div className="cta-box text-center p-5 rounded-4 shadow">
             <h2 className="mb-3 text-white">Ready to Accelerate Your Business Growth?</h2>
             <p className="mb-4 text-white opacity-75">Connect with our experts today for a personalized consultation.</p>
-            <Button className="btn-premium px-5 py-3">Inquire Now <FaChevronRight className="ms-2" /></Button>
+            <Button className="btn-premium px-5 py-3" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Inquire Now <FaChevronRight className="ms-2" /></Button>
           </div>
         </Container>
       </section>
