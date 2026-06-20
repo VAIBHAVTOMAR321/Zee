@@ -40,8 +40,8 @@ function Home() {
           heroSlides: [
              {
                id: 1,
-               title: "Zero Error Enterprises",
-               subtitle: "Empowering Businesses with Strategic Innovation and Global Excellence.",
+               title: "Zero Error Enterpries",
+               subtitle: "Creates custom software solutions for businesses and individuals so that they can show case their business and help increase productivity, reduce costs, and improve efficiency.",
                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070",
                btnText: "Explore Services"
              },

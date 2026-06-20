@@ -163,21 +163,24 @@ const Contact = () => {
                       <FaMapMarkerAlt size={20} className="text-primary me-3 mt-1" />
                       <div>
                         <strong>Address:</strong>
-                        <p className="text-muted mb-0">789 Corporate Plaza, Financial District, NY</p>
+                        <p className="text-muted mb-0">
+Park Road -Near keshav Road Dehradun , Uttarakhand</p>
                       </div>
                     </li>
                     <li className="d-flex align-items-start mb-4">
                       <FaPhone size={20} className="text-primary me-3 mt-1" />
                       <div>
                         <strong>Phone:</strong>
-                        <p className="text-muted mb-0">+1 (800) ZEE-ZERO</p>
+                        <p className="text-muted mb-0">+91-9690000217
+</p>
                       </div>
                     </li>
                     <li className="d-flex align-items-start">
                       <FaEnvelope size={20} className="text-primary me-3 mt-1" />
                       <div>
                         <strong>Email:</strong>
-                        <p className="text-muted mb-0">contact@zeezero.com</p>
+                        <p className="text-muted mb-0">
+info.zeroerror@gmail.com</p>
                       </div>
                     </li>
                   </ul>

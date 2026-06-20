@@ -11,7 +11,7 @@ function Footer() {
             <Col lg={4} className="mb-4">
               <h3 className="footer-logo mb-3">
 Zero Error Enterprises</h3>
-              <p className="text-muted pe-lg-4">Leading the path in corporate excellence and innovation. Providing professional services across the globe with unmatched quality.</p>
+              <p className="text-muted pe-lg-4">Zero Error Enterprises is Software Consulting and Development company based in dehradun. </p>
               <div className="footer-socials d-flex gap-3 mt-4">
                 <a href="#"><FaFacebook /></a>
                 <a href="#"><FaTwitter /></a>
@@ -21,7 +21,7 @@ Zero Error Enterprises</h3>
             <Col lg={4} md={6} className="mb-4">
               <h5 className="mb-4 fw-bold">Company Info</h5>
               <ul className="list-unstyled footer-contact-list">
-                <li className="mb-3 small"><FaMapMarkerAlt className="text-primary me-2" /> 789 Corporate Plaza, Financial District, NY</li>
+                <li className="mb-3 small"><FaMapMarkerAlt className="text-primary me-2" /> Park Road -Near keshav Road Dehradun , Uttarakhand</li>
                 <li className="mb-3 small"><FaPhone className="text-primary me-2" /> +91-9690000217</li>
                 <li className="mb-3 small"><FaEnvelope className="text-primary me-2" /> info.zeeindia@gmail.in</li>
               </ul>
