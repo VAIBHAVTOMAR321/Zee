@@ -8,6 +8,7 @@ import {
   FaCube, FaTools, FaServer, FaIndustry, FaArrowUp
 } from 'react-icons/fa';
 import "../../assets/css/home.css";
+import Services from "./Services";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -168,28 +169,8 @@ function Home() {
         </Container>
       </section>
 
-      {/* Our Services Section */}
       <section id="services" className="services-section py-5 bg-light">
-        <Container>
-          <div className="section-header text-center mb-5">
-            <span className="subtitle">EXPERT SOLUTIONS</span>
-            <h2 className="">Our Premium Services</h2>
-            <div className="title-bar mx-auto"></div>
-          </div>
-          <Row>
-            {pageData.services.map((service, idx) => (
-              <Col md={6} lg={3} key={idx} className="mb-4 about-style">
-                <Card className="service-card border-0 shadow-sm h-100  p-3" key={service.id}>
-                  <Card.Body>
-                    <div className="service-icon-box mb-4"><FaBriefcase /></div>
-                    <h4 className="fw-bold mb-3">{service.title}</h4>
-                    <p className="text-muted small mb-0">{service.desc}</p>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
+        <Services showBanner={false} />
       </section>
 
       {/* Our Products Section */}

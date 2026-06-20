@@ -4,7 +4,7 @@ import axios from 'axios';
 import { FaBriefcase } from 'react-icons/fa';
 import '../../services.css';
 
-const Services = () => {
+const Services = ({ showBanner = true }) => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -38,15 +38,17 @@ const Services = () => {
 
   return (
     <div className="services-page">
-      <header className="services-hero-section py-5">
-        <div className="hero-overlay"></div>
-        <Container className="position-relative z-2">
-          <h1 className="display-4 fw-bold mb-3">Our Services</h1>
-          <p className="lead fs-5 mb-0">
-            Delivering excellence and value through our comprehensive solutions.
-          </p>
-        </Container>
-      </header>
+      {showBanner && (
+        <header className="services-hero-section py-5">
+          <div className="hero-overlay"></div>
+          <Container className="position-relative z-2">
+            <h1 className="display-4 fw-bold mb-3">Our Services</h1>
+            <p className="lead fs-5 mb-0">
+              Delivering excellence and value through our comprehensive solutions.
+            </p>
+          </Container>
+        </header>
+      )}
 
       <section className="py-5 bg-light">
         <Container>
