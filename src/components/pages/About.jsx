@@ -1,33 +1,31 @@
 import React from 'react';
-import { Container, Row, Col, Card, Image } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import { FaBuilding, FaUsers, FaLightbulb } from 'react-icons/fa';
 import '../../about.css';
+import AboutUs from  "../../assets/images/pms.jpg"
 
 const About = () => {
   return (
     <div className="about-page">
-      <header className="about-hero-section text-center text-white py-5">
-        <Container>
-          <h1 className="display-5 fw-bold">About Zee Zero Enterprises</h1>
-          <p className="lead">
+      <header className="about-hero-section py-5">
+        <div className="hero-overlay"></div>
+        <Container className="position-relative z-2">
+          <h1 className="display-4 fw-bold mb-3">About Zee Zero Enterprises</h1>
+          <p className="lead fs-5 mb-0">
             Pioneering strategic innovation and global excellence.
           </p>
         </Container>
       </header>
 
-      <section className="py-5">
+<section className="py-5">
         <Container>
           <Row className="align-items-center">
             <Col lg={6}>
-              <Image 
-                src="https://images.unsplash.com/photo-1522071823991-b5182991e38f?auto=format&fit=crop&q=80&w=2070" 
-                fluid 
-                rounded 
-                className="shadow-lg"
-              />
+              <img src={AboutUs} alt="about us" className="img-fluid rounded shadow-sm" />
             </Col>
             <Col lg={6}>
-              <h2 className="fw-bold">Our Story</h2>
+              <h2 className="fw-bold mb-4 story-title">Our Story</h2>
+              <div className="title-bar"></div>
               <p className="text-muted">
                 Founded on the principles of integrity, innovation, and client-centricity, Zee Zero Enterprises has grown from a small consultancy to a global provider of comprehensive business solutions. We are dedicated to helping our clients navigate the complexities of the modern market.
               </p>
@@ -42,8 +40,8 @@ const About = () => {
       <section className="py-5 bg-light">
         <Container>
           <div className="text-center mb-5">
-            <h2 className="fw-bold">Our Core Values</h2>
-            <p className="text-muted">The principles that guide our work and our partnerships.</p>
+            <h2 className="fw-bold section-title">Our Core Values</h2>
+            <p className="lead core-values-subtitle">The principles that guide our work and our partnerships.</p>
           </div>
           <Row>
             <Col md={4} className="mb-4">
