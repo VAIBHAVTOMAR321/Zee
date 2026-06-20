@@ -322,7 +322,7 @@ html {
 .counter-val {
   font-size: 3rem;
   font-weight: 800;
-  color: var(--accent);
+  color: #fff;
 }
 
 /* CTA Section */

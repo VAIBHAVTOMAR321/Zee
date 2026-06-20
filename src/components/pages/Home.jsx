@@ -128,7 +128,7 @@ function Home() {
             <Col lg={6} className="mb-4 mb-lg-0">
               <div className="section-header text-start">
                 <span className="subtitle">ABOUT OUR COMPANY</span>
-                <h2 className="section-title">Redefining Corporate Standards</h2>
+                <h2 className="">Redefining Corporate Standards</h2>
                 <div className="title-bar"></div>
               </div>
               <p className="lead fw-bold color-primary">Zee Zero Enterprises is built on a foundation of trust, innovation, and an unwavering commitment to our clients' success.</p>
@@ -173,13 +173,13 @@ function Home() {
         <Container>
           <div className="section-header text-center mb-5">
             <span className="subtitle">EXPERT SOLUTIONS</span>
-            <h2 className="section-title">Our Premium Services</h2>
+            <h2 className="">Our Premium Services</h2>
             <div className="title-bar mx-auto"></div>
           </div>
           <Row>
             {pageData.services.map((service, idx) => (
               <Col md={6} lg={3} key={idx} className="mb-4">
-                <Card className="service-card border-0 shadow-sm h-100 text-center p-3" key={service.id}>
+                <Card className="service-card border-0 shadow-sm h-100  p-3" key={service.id}>
                   <Card.Body>
                     <div className="service-icon-box mb-4"><FaBriefcase /></div>
                     <h4 className="fw-bold mb-3">{service.title}</h4>
@@ -197,7 +197,7 @@ function Home() {
         <Container>
           <div className="section-header text-center mb-5">
             <span className="subtitle">QUALITY HARDWARE & SOFTWARE</span>
-            <h2 className="section-title">Our Featured Products</h2>
+            <h2 className="">Our Featured Products</h2>
             <div className="title-bar mx-auto"></div>
           </div>
           <Row>
@@ -229,7 +229,7 @@ function Home() {
         <Container>
           <div className="section-header text-center mb-5">
             <span className="subtitle">LATEST PROJECTS</span>
-            <h2 className="section-title">Showcasing Our Work</h2>
+            <h2 className="">Showcasing Our Work</h2>
             <div className="title-bar mx-auto"></div>
           </div>
           <Row className="g-4">
