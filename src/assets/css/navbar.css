@@ -4,15 +4,12 @@
     ========================================== */
 
 :root {
-  --gd-gold: #D4AF37;
-  --gd-gold-light: #F4D03F;
-  --gd-gold-dark: #8B6914;
-  --gd-bronze: #CD7F32;
-  --gd-warm-white: #FFFAF0;
-  --gd-dark: #1a1a2e;
-  --gd-text: #333333;
-  --gd-text-light: #666666;
-  --gd-shadow: rgba(212, 175, 55, 0.2);
+  --primary: #E31E24;
+  --primary-dark: #C4141A;
+  --secondary: #333333;
+  --light: #F5F5F5;
+  --white: #FFFFFF;
+  --shadow: rgba(227, 30, 36, 0.2);
 }
 
 /* ---- Main Navbar ---- */
@@ -20,8 +17,7 @@
   background: #fff !important;
   padding: 0 !important;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
-  border-bottom: 3px solid transparent;
-  border-image: linear-gradient(to right, #0D6EFD, var(--gd-gold-light), var(--gd-bronze)) 1;
+  border-bottom: 3px solid var(--primary);
   transition: all 0.3s ease;
   min-height: 70px;
   display: flex;
@@ -29,7 +25,7 @@
 }
 
 .custom-navbar.scrolled {
-  box-shadow: 0 4px 30px rgba(212, 175, 55, 0.15);
+  box-shadow: 0 4px 30px var(--shadow);
 }
 
 /* ---- Brand / Logo ---- */
@@ -56,13 +52,13 @@
 .brand-text {
   font-weight: 800;
   font-size: 18px;
-  color: var(--gd-dark) !important;
+  color: var(--secondary) !important;
   letter-spacing: 0.5px;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .brand-highlight {
-  color: var(--gd-gold-dark);
+  color: var(--primary-dark);
   position: relative;
 }
 
@@ -73,7 +69,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(to right, #0D6EFD, var(--gd-bronze));
+  background: var(--primary);
   border-radius: 2px;
 }
 
@@ -83,7 +79,7 @@
 }
 
 .nav-link-item {
-  color: var(--gd-text) !important;
+  color: var(--secondary) !important;
   font-weight: 600;
   font-size: 14px;
   padding: 8px 18px !important;
@@ -100,13 +96,13 @@
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: #0D6EFD;
+  background: var(--primary);
   transition: all 0.3s ease;
 }
 
 .nav-link-item:hover {
-  color: var(--gd-gold-dark) !important;
-  background: rgba(212, 175, 55, 0.1);
+  color: var(--primary-dark) !important;
+  background: rgba(227, 30, 36, 0.1);
 }
 
 .nav-link-item:hover .nav-link-dot {
@@ -116,8 +112,8 @@
 
 /* Active link styling */
 .nav-link-item.active {
-  color: var(--gd-gold-dark) !important;
-  background: rgba(212, 175, 55, 0.12);
+  color: var(--primary-dark) !important;
+  background: rgba(227, 30, 36, 0.12);
 }
 
 .nav-link-item.active .nav-link-dot {
@@ -127,7 +123,7 @@
 
 /* ---- Register/Login Button ---- */
 .register-btn {
-  background: linear-gradient(135deg, #0D6EFD 0%, var(--gd-bronze) 100%) !important;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%) !important;
   color: #ffffff !important;
   font-weight: 700;
   font-size: 14px;
@@ -135,7 +131,7 @@
   border-radius: 50px !important;
   margin-left: 12px;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 4px 15px var(--shadow);
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -145,9 +141,9 @@
 }
 
 .register-btn:hover {
-  background: linear-gradient(135deg, var(--gd-gold-dark) 0%, #0D6EFD 100%) !important;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #000 100%) !important;
   color: #ffffff !important;
-  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.45);
+  box-shadow: 0 6px 25px var(--shadow);
   transform: translateY(-2px);
 }
 
@@ -164,8 +160,8 @@
 .mobile-language-toggle {
   display: none;
   background: #ffffff !important;
-  border: 2px solid #0D6EFD !important;
-  color: var(--gd-gold-dark) !important;
+  border: 2px solid var(--primary) !important;
+  color: var(--primary-dark) !important;
   font-weight: 600;
   font-size: 13px;
   padding: 6px 14px !important;
@@ -175,10 +171,10 @@
 }
 
 .mobile-language-toggle:hover {
-  background: #0D6EFD !important;
+  background: var(--primary) !important;
   color: #ffffff !important;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 4px 12px var(--shadow);
 }
 
 .mobile-language-toggle i {
@@ -189,8 +185,8 @@
 .desktop-language-toggle {
   display: none;
   background: transparent !important;
-  border: 2px solid #0D6EFD !important;
-  color: var(--gd-gold-dark) !important;
+  border: 2px solid var(--primary) !important;
+  color: var(--primary-dark) !important;
   font-weight: 600;
   font-size: 13px;
   padding: 10px 14px !important;
@@ -200,10 +196,10 @@
 }
 
 .desktop-language-toggle:hover {
-  background: #0D6EFD !important;
+  background: var(--primary) !important;
   color: #ffffff !important;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 4px 12px var(--shadow);
 }
 
 .desktop-language-toggle i {
@@ -234,10 +230,15 @@
 .toggler-line {
   width: 24px;
   height: 3px;
-  background: #0D6EFD;
+  background: var(--primary);
   border-radius: 2px;
   transition: all 0.3s ease;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-toggler-custom:hover {
+  background: rgba(227, 30, 36, 0.1) !important;
+  border-radius: 8px;
 }
 
 .navbar-toggler-custom[aria-expanded="true"] .toggler-line:nth-child(1) {
@@ -307,13 +308,13 @@
     /* Push hamburger to far right */
     .navbar-toggler-custom {
       margin-left: auto;
-      background: rgba(212, 175, 55, 0.1) !important;
+      background: rgba(227, 30, 36, 0.1) !important;
       border-radius: 8px;
       padding: 10px !important;
     }
 
     .navbar-toggler-custom:hover {
-      background: rgba(212, 175, 55, 0.2) !important;
+      background: rgba(227, 30, 36, 0.2) !important;
     }
 
     /* Hide desktop toggle on mobile */
@@ -335,7 +336,7 @@
    }
 
    .nav-link-item:hover {
-     background: rgba(212, 175, 55, 0.1);
+     background: rgba(227, 30, 36, 0.1);
    }
 
    .register-btn {
@@ -400,7 +401,7 @@
     transform: translateX(-50%) scaleX(0);
     width: 60%;
     height: 2px;
-    background: linear-gradient(to right, #0D6EFD, var(--gd-gold-light));
+    background: var(--primary);
     border-radius: 1px;
     transition: transform 0.3s ease;
   }

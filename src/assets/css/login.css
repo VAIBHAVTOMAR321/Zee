@@ -1,7 +1,15 @@
 /* ==========================================
-   GyanDhara Login Theme
-   Blue-Orange matching brand logo
+   Zee Login Theme
+   Red-Gray matching brand logo
    ========================================== */
+
+:root {
+  --primary: #E31E24;
+  --primary-dark: #C4141A;
+  --secondary: #333333;
+  --light: #F5F5F5;
+  --white: #FFFFFF;
+}
 
 .login-page {
   display: flex;
@@ -20,9 +28,9 @@
   right: 0;
   bottom: 0;
   background-image:
-    radial-gradient(circle at 15% 85%, rgba(230, 81, 0, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 85% 15%, rgba(27, 79, 138, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(255, 143, 0, 0.03) 0%, transparent 40%);
+    radial-gradient(circle at 15% 85%, rgba(227, 30, 36, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 85% 15%, rgba(51, 51, 51, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(196, 20, 26, 0.03) 0%, transparent 40%);
   pointer-events: none;
 }
 
@@ -33,11 +41,35 @@
    border-radius: 24px;
    overflow: hidden;
    box-shadow:
-     0 25px 60px -12px rgba(14, 58, 107, 0.18),
-     0 0 0 1px rgba(27, 79, 138, 0.08);
+    0 25px 60px -12px rgba(196, 20, 26, 0.18),
+    0 0 0 1px rgba(227, 30, 36, 0.08);
    position: relative;
    z-index: 1;
  }
+
+.login-header::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--light), transparent);
+}
+
+.brand-logo {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  box-shadow: 0 6px 20px rgba(227, 30, 36, 0.25), 0 4px 12px rgba(51, 51, 51, 0.15);
+  position: relative;
+  overflow: hidden;
+}
 
 .login-content {
    padding: 30px 36px;
@@ -63,13 +95,13 @@
 .brand-logo {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, #1B4F8A 0%, #E65100 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
   border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 12px;
-  box-shadow: 0 6px 20px rgba(27, 79, 138, 0.25), 0 4px 12px rgba(230, 81, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(227, 30, 36, 0.25), 0 4px 12px rgba(51, 51, 51, 0.15);
   position: relative;
   overflow: hidden;
 }
@@ -94,13 +126,13 @@
 .login-header h1 {
   font-size: 24px;
   font-weight: 800;
-  color: #1B4F8A;
+  color: var(--primary);
   margin: 0 0 2px;
   letter-spacing: 0.5px;
 }
 
 .login-header h1 span {
-  color: #E65100;
+  color: var(--secondary);
 }
 
 .login-header p {
@@ -191,7 +223,7 @@
 }
 
 .input-wrapper-text input:focus ~ i {
-  color: #E65100;
+  color: var(--primary-dark);
 }
 
 .input-wrapper-text input {
@@ -202,14 +234,14 @@
   font-size: 13px;
   transition: all 0.25s ease;
   background: #FAFBFD;
-  color: #1E293B;
+  color: var(--secondary);
 }
 
 .input-wrapper-text input:focus {
   outline: none;
-  border-color: #FF8F00;
+  border-color: var(--primary);
   background: #FFFFFF;
-  box-shadow: 0 0 0 4px rgba(255, 143, 0, 12);
+  box-shadow: 0 0 0 4px rgba(227, 30, 36, 0.12);
 }
 
 .input-wrapper-text input::placeholder {
@@ -235,7 +267,7 @@
 }
 
 .input-wrapper input:focus ~ i:first-of-type {
-  color: #E65100;
+  color: var(--primary-dark);
 }
 
 .input-wrapper input {
@@ -246,14 +278,14 @@
   font-size: 13px;
   transition: all 0.25s ease;
   background: #FAFBFD;
-  color: #1E293B;
+  color: var(--secondary);
 }
 
 .input-wrapper input:focus {
   outline: none;
-  border-color: #FF8F00;
+  border-color: var(--primary);
   background: #FFFFFF;
-  box-shadow: 0 0 0 4px rgba(255, 143, 0, 12);
+  box-shadow: 0 0 0 4px rgba(227, 30, 36, 0.12);
 }
 
 .input-wrapper input::placeholder {
@@ -289,7 +321,7 @@
 }
 
 .password-toggle:hover {
-  color: #E65100;
+  color: var(--primary-dark);
 }
 
 /* ---- Options ---- */
@@ -312,27 +344,27 @@
 .remember-me input {
   width: 15px;
   height: 15px;
-  accent-color: #E65100;
+  accent-color: var(--primary);
   cursor: pointer;
 }
 
 .forgot-link {
   font-size: 12px;
-  color: #1B4F8A;
+  color: var(--primary);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
 .forgot-link:hover {
-  color: #E65100;
+  color: var(--secondary);
 }
 
 /* ---- Login Button ---- */
 .login-btn {
   width: 100%;
   padding: 13px;
-  background: linear-gradient(135deg, #1B4F8A 0%, #2E6DB4 40%, #E65100 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 40%, var(--secondary) 100%);
   background-size: 200% 100%;
   background-position: 0% 50%;
   border: none;
@@ -370,7 +402,7 @@
 
 .login-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(27, 79, 138, 0.3), 0 4px 15px rgba(230, 81, 0, 0.2);
+  box-shadow: 0 8px 25px rgba(227, 30, 36, 0.3), 0 4px 15px rgba(51, 51, 51, 0.2);
   background-position: 100% 50%;
 }
 
@@ -411,14 +443,14 @@
 }
 
 .login-footer a {
-  color: #E65100;
+  color: var(--primary);
   text-decoration: none;
   font-weight: 700;
   transition: color 0.2s ease;
 }
 
 .login-footer a:hover {
-  color: #1B4F8A;
+  color: var(--secondary);
 }
 
 /* ==========================================

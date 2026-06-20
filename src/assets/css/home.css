@@ -3,9 +3,10 @@ html {
 }
 
 :root {
-  --primary-color: #0a1931;
-  --secondary-color: #185adb;
-  --accent-color: #ff914d;
+  --primary: #E31E24;
+  --primary-dark: #C4141A;
+  --secondary: #333333;
+  --accent: #ff914d;
   --text-dark: #1a1a2e;
   --text-muted: #6c757d;
   --white: #ffffff;
@@ -55,7 +56,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(10, 25, 49, 0.9) 0%, rgba(10, 25, 49, 0.4) 100%);
+  background: linear-gradient(135deg, rgba(227, 30, 36, 0.9) 0%, rgba(227, 30, 36, 0.4) 100%);
   z-index: 1;
 }
 
@@ -84,7 +85,7 @@ html {
 }
 
 .btn-premium {
-  background-color: var(--secondary-color) !important;
+  background-color: var(--primary) !important;
   border: none !important;
   padding: 14px 35px !important;
   font-weight: 600 !important;
@@ -94,7 +95,7 @@ html {
 }
 
 .btn-premium:hover {
-  background-color: #1248af !important;
+  background-color: var(--primary-dark) !important;
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
@@ -110,12 +111,12 @@ html {
 
 .btn-premium-outline:hover {
   background-color: var(--white) !important;
-  color: var(--primary-color) !important;
+  color: var(--primary) !important;
 }
 
 /* Section Styling */
 .section-header .subtitle {
-  color: var(--secondary-color);
+  color: var(--primary);
   font-weight: 700;
   letter-spacing: 2px;
   font-size: 0.85rem;
@@ -128,13 +129,13 @@ html {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 800;
   margin-bottom: 15px;
-  color: var(--primary-color);
+  color: var(--secondary);
 }
 
 .title-bar {
   width: 60px;
   height: 5px;
-  background-color: var(--secondary-color);
+  background-color: var(--primary);
   border-radius: 10px;
   margin-bottom: 35px;
 }
@@ -145,12 +146,12 @@ html {
   background: var(--white);
   border-radius: 12px;
   box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-  border-left: 4px solid var(--secondary-color);
+  border-left: 4px solid var(--primary);
 }
 
 .about-icon {
   font-size: 2.2rem;
-  color: var(--secondary-color);
+  color: var(--primary);
   margin-bottom: 15px;
 }
 
@@ -163,14 +164,14 @@ html {
   position: absolute;
   bottom: 0;
   right: 0;
-  background: var(--secondary-color);
+  background: var(--primary);
   color: white;
   padding: 20px 30px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 15px 35px rgba(24, 90, 219, 0.3);
+  box-shadow: 0 15px 35px rgba(227, 30, 36, 0.3);
 }
 
 .experience-badge .years {
@@ -193,8 +194,8 @@ html {
 .service-icon-box {
   width: 70px;
   height: 70px;
-  background: rgba(24, 90, 219, 0.1);
-  color: var(--secondary-color);
+  background: rgba(227, 30, 36, 0.1);
+  color: var(--primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -220,7 +221,7 @@ html {
 .product-card:hover {
   transform: translateY(-12px);
   box-shadow: 0 25px 50px rgba(0,0,0,0.1) !important;
-  border-color: var(--accent-color); /* Highlight on hover */
+  border-color: var(--primary); /* Highlight on hover */
 }
 
 .product-img-wrapper {
@@ -247,14 +248,14 @@ html {
   position: relative; /* Changed from absolute to relative to stack on top of image */
   z-index: 1;
   padding: 20px;
-  background: linear-gradient(to top, rgba(10, 25, 49, 0.9) 0%, rgba(10, 25, 49, 0.6) 50%, rgba(10, 25, 49, 0) 100%);
+  background: linear-gradient(to top, rgba(227, 30, 36, 0.9) 0%, rgba(227, 30, 36, 0.6) 50%, rgba(227, 30, 36, 0) 100%);
   color: var(--white);
   text-align: center;
 }
 
 .product-icon-box {
   background: rgba(255, 145, 77, 0.1);
-  color: var(--accent-color);
+  color: var(--accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -294,7 +295,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(10, 25, 49, 0.8);
+  background: rgba(227, 30, 36, 0.8);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -312,7 +313,7 @@ html {
 
 /* Why Choose Us */
 .why-us-section {
-  background: linear-gradient(rgba(10, 25, 49, 0.95), rgba(10, 25, 49, 0.95)), 
+  background: linear-gradient(rgba(227, 30, 36, 0.95), rgba(227, 30, 36, 0.95)), 
               url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2070');
   background-size: cover;
   background-attachment: fixed;
@@ -321,12 +322,12 @@ html {
 .counter-val {
   font-size: 3rem;
   font-weight: 800;
-  color: var(--accent-color);
+  color: var(--accent);
 }
 
 /* CTA Section */
 .cta-box {
-  background: linear-gradient(135deg, var(--primary-color) 0%, #1e3a8a 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: white;
 }
 
@@ -335,7 +336,7 @@ html {
   width: 40px;
   height: 40px;
   background: white;
-  color: var(--primary-color);
+  color: var(--secondary);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -345,7 +346,7 @@ html {
 }
 
 .footer-socials a:hover {
-  background: var(--secondary-color);
+  background: var(--primary);
   color: white;
   transform: translateY(-3px);
 }
@@ -357,7 +358,7 @@ html {
   right: 30px;
   width: 50px;
   height: 50px;
-  background-color: var(--secondary-color);
+  background-color: var(--secondary);
   color: white;
   border: none;
   border-radius: 50%;
@@ -379,6 +380,6 @@ html {
 }
 
 .scroll-to-top:hover {
-  background-color: var(--primary-color);
+  background-color: var(--primary);
   transform: translateY(-5px);
 }
