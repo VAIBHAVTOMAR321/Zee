@@ -36,17 +36,22 @@ const Projects = () => {
 
   return (
     <div className="projects-page">
-      <header className="projects-hero-section text-center text-white py-5">
-        <Container>
-          <h1 className="display-5 fw-bold">Our Projects</h1>
-          <p className="lead">
+      <header className="projects-hero-section py-5">
+        <div className="hero-overlay"></div>
+        <Container className="position-relative z-2">
+          <h1 className="display-4 fw-bold mb-3">Our Projects</h1>
+          <p className="lead fs-5 mb-0">
             A showcase of our commitment to innovation and quality.
           </p>
         </Container>
       </header>
 
-      <section className="py-5">
+      <section className="py-5 bg-light">
         <Container>
+          <div className="text-center mb-5">
+            <h2 className="fw-bold section-title">Our Projects</h2>
+            <p className="lead projects-subtitle">A showcase of our commitment to innovation and quality.</p>
+          </div>
           {loading ? (
             <div className="text-center">
               <Spinner animation="border" variant="primary" />
@@ -58,7 +63,7 @@ const Projects = () => {
             <Row className="g-4">
               {projects.map(project => (
                 <Col lg={4} md={6} key={project.id}>
-                  <Card className="h-100 project-item-card border-0 shadow-sm overflow-hidden">
+                  <Card className="h-100 project-item-card text-center p-4">
                     <div className="project-img-container">
                       <Card.Img 
                         variant="top" 

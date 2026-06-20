@@ -1,0 +1,44 @@
+import React from 'react'
+
+function Footer() {
+  return (
+    <div>
+          <footer className="footer-section pt-5">
+        <Container>
+          <Row className="pb-5">
+            <Col lg={4} className="mb-4">
+              <h3 className="footer-logo mb-3">Zee Zero</h3>
+              <p className="text-muted pe-lg-4">Leading the path in corporate excellence and innovation. Providing professional services across the globe with unmatched quality.</p>
+              <div className="footer-socials d-flex gap-3 mt-4">
+                <a href="#"><FaFacebook /></a>
+                <a href="#"><FaTwitter /></a>
+                <a href="#"><FaLinkedin /></a>
+              </div>
+            </Col>
+            <Col lg={4} md={6} className="mb-4">
+              <h5 className="mb-4 fw-bold">Company Info</h5>
+              <ul className="list-unstyled footer-contact-list">
+                <li className="mb-3 small"><FaMapMarkerAlt className="text-primary me-2" /> 789 Corporate Plaza, Financial District, NY</li>
+                <li className="mb-3 small"><FaPhone className="text-primary me-2" /> +1 (800) ZEE-ZERO</li>
+                <li className="mb-3 small"><FaEnvelope className="text-primary me-2" /> contact@zeezero.com</li>
+              </ul>
+            </Col>
+            <Col lg={4} md={6} className="mb-4">
+              <h5 className="mb-4 fw-bold">Newsletter</h5>
+              <p className="small text-muted mb-3">Subscribe to get latest business news and updates.</p>
+              <div className="input-group mb-3">
+                <input type="text" className="form-control" placeholder="Email address" />
+                <Button variant="primary">Join</Button>
+              </div>
+            </Col>
+          </Row>
+          <div className="footer-bottom border-top py-4 text-center">
+            <p className="mb-0 small text-muted">&copy; 2024 Zee Zero Enterprises. All rights reserved.</p>
+          </div>
+        </Container>
+      </footer>
+    </div>
+  )
+}
+
+export default Footer

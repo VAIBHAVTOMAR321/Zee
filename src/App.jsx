@@ -28,6 +28,7 @@ import AllProducts from "./AllProducts";
 import AllProjects from "./AllProjects";
 import Query from "./Query";
 
+
 function AppContent() {
   const location = useLocation();
 
@@ -53,6 +54,7 @@ function AppContent() {
           <Route path="/Login" element={<Login />} />
           
         </Routes>
+       
     </>
   );
 }

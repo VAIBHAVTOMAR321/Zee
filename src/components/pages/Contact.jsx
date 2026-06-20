@@ -62,17 +62,22 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
-      <header className="contact-hero-section text-center text-white py-5">
-        <Container>
-          <h1 className="display-5 fw-bold">Contact Us</h1>
-          <p className="lead">
+      <header className="contact-hero-section py-5">
+        <div className="hero-overlay"></div>
+        <Container className="position-relative z-2">
+          <h1 className="display-4 fw-bold mb-3">Contact Us</h1>
+          <p className="lead fs-5 mb-0">
             We're here to help and answer any question you might have.
           </p>
         </Container>
       </header>
 
-      <section className="py-5">
+      <section className="py-5 bg-light">
         <Container>
+          <div className="text-center mb-5">
+            <h2 className="fw-bold section-title">Get In Touch</h2>
+            <p className="lead contact-subtitle">We're here to help and answer any question you might have.</p>
+          </div>
           <Row>
             <Col lg={8} className="mb-4 mb-lg-0">
               <Card className="border-0 shadow-sm">

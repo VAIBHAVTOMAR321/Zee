@@ -1,13 +1,69 @@
+:root {
+  --primary: #E31E24;
+  --primary-dark: #C4141A;
+  --secondary: #1F2937;
+  --accent: #F59E0B;
+  --light: #F8FAFC;
+}
+
 .contact-hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&q=80&w=2070') no-repeat center center;
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&q=80&w=2070') no-repeat center center;
     background-size: cover;
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+}
+
+.contact-hero-section .hero-overlay {
+    position: absolute;
+    inset: 0;
+   background: linear-gradient(135deg, rgba(35, 31, 31, 0.9) 0%, rgba(227, 30, 36, 0.4) 100%);
+    z-index: 1;
+}
+
+.contact-hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-hero-section h1,
+.contact-hero-section .lead {
+    color: var(--light);
+}
+
+.contact-page .section-title {
+    color: var(--secondary);
+}
+
+.contact-page h2.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.contact-page h2.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.contact-subtitle {
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 
 .contact-page .card {
-    border: none;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-left: 3px solid var(--primary);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08) !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -16,6 +72,21 @@
     box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
 }
 
+.contact-icon {
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
 .contact-page .text-primary {
-    color: #0d6efd !important;
+    color: var(--primary) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
 }
