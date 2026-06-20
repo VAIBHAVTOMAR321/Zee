@@ -21,6 +21,7 @@ import { AuthProvider } from './components/all_login/AuthContext';
 
 import NavBar from './components/nav_bar/NavBar';
 import Login from "./components/all_login/Login";
+import Footer from './components/pages/Footer';
 
 import AdminDashboard from "./components/admin_pannel/AdminDashboard";
 import AllServices from "./AllServices";
@@ -54,8 +55,8 @@ function AppContent() {
           <Route path="/Login" element={<Login />} />
           
         </Routes>
-       
-    </>
+        {!shouldHideNavbar && <Footer />}
+      </>
   );
 }
 
