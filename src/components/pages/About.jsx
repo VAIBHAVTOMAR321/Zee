@@ -10,9 +10,9 @@ const About = () => {
       <header className="about-hero-section py-5">
         <div className="hero-overlay"></div>
         <Container className="position-relative z-2">
-          <h1 className="display-4 fw-bold mb-3">About Zee Zero Enterprises</h1>
+          <h1 className="display-4 fw-bold mb-3">What we searve to our client</h1>
           <p className="lead fs-5 mb-0">
-            Pioneering strategic innovation and global excellence.
+           About Our Company
           </p>
         </Container>
       </header>
@@ -27,11 +27,10 @@ const About = () => {
               <h2 className="fw-bold mb-4 story-title">Our Story</h2>
               <div className="title-bar"></div>
               <p className="text-muted">
-                Founded on the principles of integrity, innovation, and client-centricity, Zee Zero Enterprises has grown from a small consultancy to a global provider of comprehensive business solutions. We are dedicated to helping our clients navigate the complexities of the modern market.
+               Zero Error Enterprises is Software Consulting and Development company based in dehradun. Company was established in 2020 with goal of custom software solutions for businesses and individuals so that they can show case their business and help increase productivity, reduce costs, and improve efficiency. Our Comapny Employ is highly skilled developers, designers, and engineers who are constantly learning and staying up-to-date with the latest technology trends and advancements.
+Our team has develop too many application according to client needs.
               </p>
-              <p className="text-muted">
-                Our team of experts brings a wealth of experience from diverse industries, allowing us to deliver tailored strategies that drive growth, efficiency, and long-term success.
-              </p>
+           
             </Col>
           </Row>
         </Container>
@@ -40,8 +39,8 @@ const About = () => {
       <section className="py-5 bg-light">
         <Container>
           <div className="text-center mb-5">
-            <h2 className="fw-bold section-title">Our Core Values</h2>
-            <p className="lead core-values-subtitle">The principles that guide our work and our partnerships.</p>
+            <h2 className="fw-bold section-title">Our Vision</h2>
+            <p className="lead core-values-subtitle">To become a leading software development company that is recognized for its innovative and user friendly software solutions, exceptional customer service, and dedication to the professional growth and well-being ofits employees.</p>
           </div>
           <Row>
             <Col md={4} className="mb-4">
@@ -50,9 +49,9 @@ const About = () => {
                   <div className="mb-3">
                     <FaBuilding size={40} className="text-primary" />
                   </div>
-                  <Card.Title as="h4" className="fw-bold">Integrity</Card.Title>
+                  <Card.Title as="h4" className="fw-bold">Our Mision</Card.Title>
                   <Card.Text className="text-muted small">
-                    We uphold the highest standards of integrity in all of our actions.
+                   To provide high-quality software development services to our clients while fostering a culture of creativity,collaboration, and continuous learning among our employees.
                   </Card.Text>
                 </Card.Body>
               </Card>

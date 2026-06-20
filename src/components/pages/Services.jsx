@@ -66,7 +66,7 @@ const Services = ({ showBanner = true }) => {
           ) : (
               <Row className="g-4">
                 {services.map(service => (
-                  <Col lg={4} md={6} key={service.id}>
+                  <Col lg={4} md={6} key={service.id} className='about-style'>
                     <Card className="h-100 service-item-card text-center p-4">
                       <Card.Img 
                         variant="top" 
