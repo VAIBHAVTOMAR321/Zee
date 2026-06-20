@@ -318,7 +318,9 @@ html {
   background-size: cover;
   background-attachment: fixed;
 }
-
+.section-header{
+  text-align: center !important;
+}
 .counter-val {
   font-size: 3rem;
   font-weight: 800;

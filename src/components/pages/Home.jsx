@@ -195,7 +195,7 @@ function Home() {
       {/* Our Products Section */}
       <section id="products" className="products-section py-5">
         <Container>
-          <div className="section-header text-center mb-5">
+          <div className="section-header  mb-5">
             <span className="subtitle">QUALITY HARDWARE & SOFTWARE</span>
             <h2 className="">Our Featured Products</h2>
             <div className="title-bar mx-auto"></div>
