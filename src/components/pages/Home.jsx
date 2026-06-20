@@ -40,7 +40,7 @@ function Home() {
           heroSlides: [
              {
                id: 1,
-               title: " Zero Error Enterprises",
+               title: "Zero Error Enterprises",
                subtitle: "Empowering Businesses with Strategic Innovation and Global Excellence.",
                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070",
                btnText: "Explore Services"
@@ -146,7 +146,7 @@ Our team has develop too many application according to client needs.</p>
                 <Col md={6} className="mb-3">
                   <div className="about-card h-100">
                     <FaEye className="about-icon" />
-                    <h4>Our Mision</h4>
+                    <h4>Our Mission</h4>
                     <p className="small text-muted">To provide high-quality software development services to our clients while fostering a culture of creativity,collaboration, and continuous learning among our employees.</p>
                   </div>
                 </Col>
@@ -237,32 +237,51 @@ Our team has develop too many application according to client needs.</p>
         </Container>
       </section>
 
-      {/* Why Choose Us Section with Counters */}
-      <section className="why-us-section py-5 text-white">
+     
+
+      {/* Why Choose Us Section */}
+      <section id="why-us" className="why-us-section py-5 bg-light">
         <Container>
-          <Row className="text-center align-items-center">
-            <Col md={3} sm={6} className="mb-4 mb-md-0">
-              <div className="counter-item">
-                <h2 className="counter-val">250+</h2>
-                <p className="mb-0">Global Partners</p>
+          <div className="section-header why text-center mb-5">
+            <span className="subtitle">WHY CHOOSE US</span>
+            <h2 className="">Why Us?</h2>
+            <div className="title-bar mx-auto"></div>
+              <p className="text-center mb-4">
+            We have a team of software professionals that specialize in each of the unique skills that are necessary for a strong internet presence. Our aim is to provide the best services through its extensive experience and knowledge. With its examined processes this company makes recommendations to maximize a client's profitability within efficient time management.
+          </p>
+          </div>
+        
+          <Row className="g-4">
+            <Col md={4}>
+              <div className="about-card h-100 text-center p-4">
+                <h4>100% Result Oriented</h4>
+                <p className="text-muted">Work on time with guaranteed results</p>
               </div>
             </Col>
-            <Col md={3} sm={6} className="mb-4 mb-md-0">
-              <div className="counter-item">
-                <h2 className="counter-val">1.2K</h2>
-                <p className="mb-0">Projects Finished</p>
+            <Col md={4}>
+              <div className="about-card h-100 text-center p-4">
+                <h4>100+ Satisfied Clients</h4>
+                <p className="text-muted">Happy clients across various industries</p>
               </div>
             </Col>
-            <Col md={3} sm={6} className="mb-4 mb-md-0">
-              <div className="counter-item">
-                <h2 className="counter-val">99%</h2>
-                <p className="mb-0">Happy Clients</p>
+            <Col md={4}>
+              <div className="about-card h-100 text-center p-4">
+                <h4>Certified Professionals</h4>
+                <p className="text-muted">Team of professionals certified programmer by OCP and MCP</p>
               </div>
             </Col>
-            <Col md={3} sm={6} className="mb-4 mb-md-0">
-              <div className="counter-item">
-                <h2 className="counter-val">45+</h2>
-                <p className="mb-0">Awards Won</p>
+          </Row>
+          <Row className="mt-4 g-4">
+            <Col md={6}>
+              <div className="about-card h-100 text-center p-4">
+                <h4>Cost Effective Services</h4>
+                <p className="text-muted">Quality services at competitive prices</p>
+              </div>
+            </Col>
+            <Col md={6}>
+              <div className="about-card h-100 text-center p-4">
+                <h4>We Work On</h4>
+                <p className="text-muted">Java technology, PHP technology, CMS Interface, AJAX, JQuery, JS, NodeJS, Bootstrap</p>
               </div>
             </Col>
           </Row>

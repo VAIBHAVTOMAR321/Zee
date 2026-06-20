@@ -9,7 +9,8 @@ function Footer() {
         <Container>
           <Row className="pb-5">
             <Col lg={4} className="mb-4">
-              <h3 className="footer-logo mb-3">Zee Zero</h3>
+              <h3 className="footer-logo mb-3">
+Zero Error Enterprises</h3>
               <p className="text-muted pe-lg-4">Leading the path in corporate excellence and innovation. Providing professional services across the globe with unmatched quality.</p>
               <div className="footer-socials d-flex gap-3 mt-4">
                 <a href="#"><FaFacebook /></a>
