@@ -26,12 +26,12 @@ import AdminDashboard from "./components/admin_pannel/AdminDashboard";
 import AllServices from "./AllServices";
 import AllProducts from "./AllProducts";
 import AllProjects from "./AllProjects";
-
+import Query from "./Query";
 
 function AppContent() {
   const location = useLocation();
 
-  const hideNavbarRoutes = [ "/AdminDashboard", "/AllServices", "/AllProducts", "/AllProjects"];
+  const hideNavbarRoutes = [ "/AdminDashboard", "/AllServices", "/AllProducts", "/AllProjects", "/Query"];
   const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
 
   return (
@@ -49,6 +49,7 @@ function AppContent() {
           <Route path="/AllProjects" element={<AllProjects />} />
           <Route path="/AllProducts" element={<AllProducts />} />
           <Route path="/AllServices" element={<AllServices />} />
+          <Route path="/Query" element={<Query />} />
           <Route path="/Login" element={<Login />} />
           
         </Routes>

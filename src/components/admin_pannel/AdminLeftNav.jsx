@@ -92,19 +92,11 @@ const AdminLeftnav = ({ sidebarOpen, setSidebarOpen, isMobile, isTablet, onNavCl
         label: "Our Projects",
         path: "/AllProjects",
       },
-       {
-   icon: <FaClock />,
-   label: "Time Schedule",
-   path: "/SupervisorDashBoard",
- },
       {
-        icon: <FaComments />,
-        label: "Send Query",
-        path: "/SupervisorDashBoard",
-      },
-      
-       
-      
+        icon: <FaQuestionCircle />,
+        label: "Queries",
+        path: "/Query",
+      }, 
      ];
 
   //  Auto-close sidebar when switching to mobile or tablet
