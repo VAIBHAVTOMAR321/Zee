@@ -42,7 +42,7 @@ function Home() {
              {
                id: 1,
                title: "Zero Error Enterpries",
-               subtitle: "Creates custom software solutions for businesses and individuals so that they can show case their business and help increase productivity, reduce costs, and improve efficiency.",
+               subtitle: "Creates custom software solutions for businesses and individuals so that they can show case their business and help increaseproductivity,reduce costs, and improve efficiency.",
                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070",
                btnText: "Explore Services"
              },
@@ -133,8 +133,8 @@ function Home() {
                 {/* <h2 className="">Zero Error Enterprises</h2> */}
                 <div className="title-bar"></div>
               </div>
-               <p className="lead fw-bold color-primary">Delivering customized, scalable, and technology-driven solutions to enhance productivity, efficiency, and business growth.</p> 
-              <p className="text-muted">Zero Error Enterprises is Software Consulting and Development company based in dehradun. Company was established in 2020 with goal of custom software solutions for businesses and individuals so that they can show case their business and help increase productivity, reduce costs, and improve efficiency. Our Comapny Employ is highly skilled developers, designers, and engineers who are constantly learning and staying up-to-date with the latest technology trends and advancements.
+               <p className="lead fw-bold color-primary">Delivering customized,scalable,and technology-driven solutions to enhance productivity, efficiency, and business growth.</p> 
+              <p className="text-muted">Zero Error Enterprises is Software Consulting and Development company based in dehradun.Company was established in 2020 with goal of custom software solutions for businesses and individuals so that they can show case their business and help increase productivity,reduce costs,and improve efficiency. Our Comapny Employ is highly skilled developers, designers, and engineers who are constantly learning and staying up-to-date with the latest technology trends and advancements.
 Our team has develop too many application according to client needs.</p>
               <Row className="mt-4">
                 <Col md={6} className="mb-3">
