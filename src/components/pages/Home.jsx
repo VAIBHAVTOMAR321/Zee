@@ -129,24 +129,25 @@ function Home() {
             <Col lg={6} className="mb-4 mb-lg-0 about-style">
               <div className="section-header text-start">
                 <span className="subtitle">ABOUT OUR COMPANY</span>
-                <h2 className="">Redefining Corporate Standards</h2>
+                {/* <h2 className="">Zero Error Enterprises</h2> */}
                 <div className="title-bar"></div>
               </div>
-              <p className="lead fw-bold color-primary">Zee Zero Enterprises is built on a foundation of trust, innovation, and an unwavering commitment to our clients' success.</p>
-              <p className="text-muted">We provide a comprehensive suite of business solutions designed to streamline operations and foster sustainable growth in an ever-evolving global market.</p>
+               <p className="lead fw-bold color-primary">Delivering customized, scalable, and technology-driven solutions to enhance productivity, efficiency, and business growth.</p> 
+              <p className="text-muted">Zero Error Enterprises is Software Consulting and Development company based in dehradun. Company was established in 2020 with goal of custom software solutions for businesses and individuals so that they can show case their business and help increase productivity, reduce costs, and improve efficiency. Our Comapny Employ is highly skilled developers, designers, and engineers who are constantly learning and staying up-to-date with the latest technology trends and advancements.
+Our team has develop too many application according to client needs.</p>
               <Row className="mt-4">
                 <Col md={6} className="mb-3">
                   <div className="about-card h-100">
                     <FaRocket className="about-icon" />
-                    <h4>Our Mission</h4>
-                    <p className="small text-muted">To deliver unparalleled value through strategic consulting and technological innovation.</p>
+                    <h4>Our Vision</h4>
+                    <p className="small text-muted">To become a leading software development company that is recognized for its innovative and user friendly software solutions, exceptional customer service, and dedication to the professional growth and well-being ofits employees.</p>
                   </div>
                 </Col>
                 <Col md={6} className="mb-3">
                   <div className="about-card h-100">
                     <FaEye className="about-icon" />
-                    <h4>Our Vision</h4>
-                    <p className="small text-muted">To be the global benchmark for professional excellence and ethical business practices.</p>
+                    <h4>Our Mision</h4>
+                    <p className="small text-muted">To provide high-quality software development services to our clients while fostering a culture of creativity,collaboration, and continuous learning among our employees.</p>
                   </div>
                 </Col>
               </Row>
