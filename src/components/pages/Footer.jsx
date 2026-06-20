@@ -21,8 +21,8 @@ function Footer() {
               <h5 className="mb-4 fw-bold">Company Info</h5>
               <ul className="list-unstyled footer-contact-list">
                 <li className="mb-3 small"><FaMapMarkerAlt className="text-primary me-2" /> 789 Corporate Plaza, Financial District, NY</li>
-                <li className="mb-3 small"><FaPhone className="text-primary me-2" /> +1 (800) ZEE-ZERO</li>
-                <li className="mb-3 small"><FaEnvelope className="text-primary me-2" /> contact@zeezero.com</li>
+                <li className="mb-3 small"><FaPhone className="text-primary me-2" /> +91-9690000217</li>
+                <li className="mb-3 small"><FaEnvelope className="text-primary me-2" /> info.zeeindia@gmail.in</li>
               </ul>
             </Col>
             <Col lg={4} md={6} className="mb-4">
