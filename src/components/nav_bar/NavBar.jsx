@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../all_login/LanguageContext";
 
 import "../../assets/css/navbar.css";
-import ukLogo from "../../assets/images/zeepnglogo.png";
+import ukLogo from "../../assets/images/zeepnglogo.jpeg";
 
 function NavBar() {
   const [expanded, setExpanded] = useState(false);
