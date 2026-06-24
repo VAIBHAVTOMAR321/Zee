@@ -28,6 +28,7 @@ import AllServices from "./AllServices";
 import AllProducts from "./AllProducts";
 import AllProjects from "./AllProjects";
 import Query from "./Query";
+import ProtectedRoute from "./components/all_login/ProtectedRoute";
 
 
 function AppContent() {
@@ -47,11 +48,31 @@ function AppContent() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
 
-          <Route path="/AdminDashboard" element={<AdminDashboard />} />
-          <Route path="/AllProjects" element={<AllProjects />} />
-          <Route path="/AllProducts" element={<AllProducts />} />
-          <Route path="/AllServices" element={<AllServices />} />
-          <Route path="/Query" element={<Query />} />
+          <Route path="/AdminDashboard" element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          } />
+          <Route path="/AllProjects" element={
+            <ProtectedRoute>
+              <AllProjects />
+            </ProtectedRoute>
+          } />
+          <Route path="/AllProducts" element={
+            <ProtectedRoute>
+              <AllProducts />
+            </ProtectedRoute>
+          } />
+          <Route path="/AllServices" element={
+            <ProtectedRoute>
+              <AllServices />
+            </ProtectedRoute>
+          } />
+          <Route path="/Query" element={
+            <ProtectedRoute>
+              <Query />
+            </ProtectedRoute>
+          } />
           <Route path="/Login" element={<Login />} />
           
         </Routes>
