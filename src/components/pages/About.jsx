@@ -28,7 +28,7 @@ const About = () => {
             <Col lg={6} className="text-center">
               <h2 className="fw-bold mb-4 story-title">Our Story</h2>
               <div className="title-bar mx-auto"></div>
-              <p className="text-muted text-start">
+              <p className="text-muted text-justify">
                 Zero Error Enterprises is Software Consulting and Development company based in dehradun. Company was established in 2020 with goal of custom software solutions for businesses and individuals so that they can show case their business and help increase productivity, reduce costs, and improve efficiency. Our Comapny Employ is highly skilled developers, designers, and engineers who are constantly learning and staying up-to-date with the latest technology trends and advancements.
                 Our team has develop too many application according to client needs.
               </p>
@@ -48,7 +48,7 @@ const About = () => {
                   <FaEye size={32} />
                 </div>
                 <h3 className="fw-bold mb-3">Our Vision</h3>
-                <p className="text-muted">
+                <p className="text-muted text-justify">
                     To become a leading software development company recognized for its innovative and user-friendly software solutions, exceptional customer service, and dedication to the professional growth and well-being of its employees.
                 </p>
               </div>
@@ -59,7 +59,7 @@ const About = () => {
                   <FaBullseye size={32} />
                 </div>
                 <h3 className="fw-bold mb-3">Our Mission</h3>
-                <p className="text-muted">
+                <p className="text-muted text-justify">
                     To provide high-quality software development services to our clients while fostering a culture of creativity, collaboration, and continuous learning among our employees.
                 </p>
               </div>

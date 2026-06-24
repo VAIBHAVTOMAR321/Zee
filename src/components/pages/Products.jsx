@@ -71,7 +71,7 @@ const Products = () => {
                     />
                     <Card.Body>
                       <Card.Title as="h4" className="fw-bold">{product.prod_title}</Card.Title>
-                      <Card.Text className="text-muted small">
+                      <Card.Text className="text-muted text-justify">
                         {product.prod_desc}
                       </Card.Text>
                     </Card.Body>
