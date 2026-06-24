@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import '../../about.css';
-import AboutUs from  "../../assets/images/pms.jpg"
+import AboutUs from  "../../assets/images/pms.jpg";
+import { FaEye, FaBullseye } from 'react-icons/fa';
 
 const About = () => {
   return (
@@ -19,13 +20,15 @@ const About = () => {
 <section className="py-5">
         <Container>
           <Row className="align-items-center">
-            <Col lg={6}>
-              <img src={AboutUs} alt="about us" className="img-fluid rounded shadow-sm" />
+            <Col lg={6} className="mb-4 mb-lg-0">
+              <div className="about-image-container">
+                <img src={AboutUs} alt="about us" className="img-fluid rounded shadow-sm about-story-image" />
+              </div>
             </Col>
-            <Col lg={6}>
+            <Col lg={6} className="text-center">
               <h2 className="fw-bold mb-4 story-title">Our Story</h2>
-              <div className="title-bar"></div>
-<p className="text-muted">
+              <div className="title-bar mx-auto"></div>
+              <p className="text-muted text-start">
                 Zero Error Enterprises is Software Consulting and Development company based in dehradun. Company was established in 2020 with goal of custom software solutions for businesses and individuals so that they can show case their business and help increase productivity, reduce costs, and improve efficiency. Our Comapny Employ is highly skilled developers, designers, and engineers who are constantly learning and staying up-to-date with the latest technology trends and advancements.
                 Our team has develop too many application according to client needs.
               </p>
@@ -40,24 +43,26 @@ const About = () => {
         <Container>
           <Row className="g-4">
             <Col md={6}>
-              <Card className="h-100 border-0 shadow-sm p-4">
-                <Card.Body>
-                  <Card.Title as="h3" className="fw-bold mb-3">Our Vision</Card.Title>
-                  <Card.Text className="text-muted">
-                    To become a leading software development company that is recognized for its innovative and user friendly software solutions, exceptional customer service, and dedication to the professional growth and well-being of its employees.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+              <div className="about-card p-4 text-center">
+                <div className="about-icon-wrapper mx-auto mb-4">
+                  <FaEye size={32} />
+                </div>
+                <h3 className="fw-bold mb-3">Our Vision</h3>
+                <p className="text-muted">
+                    To become a leading software development company recognized for its innovative and user-friendly software solutions, exceptional customer service, and dedication to the professional growth and well-being of its employees.
+                </p>
+              </div>
             </Col>
             <Col md={6}>
-              <Card className="h-100 border-0 shadow-sm p-4">
-                <Card.Body>
-                  <Card.Title as="h3" className="fw-bold mb-3">Our Mission</Card.Title>
-                  <Card.Text className="text-muted">
+              <div className="about-card p-4 text-center">
+                <div className="about-icon-wrapper mx-auto mb-4">
+                  <FaBullseye size={32} />
+                </div>
+                <h3 className="fw-bold mb-3">Our Mission</h3>
+                <p className="text-muted">
                     To provide high-quality software development services to our clients while fostering a culture of creativity, collaboration, and continuous learning among our employees.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+                </p>
+              </div>
             </Col>
           </Row>
         </Container>
