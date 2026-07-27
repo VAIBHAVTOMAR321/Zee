@@ -117,7 +117,13 @@ const OurTeam = () => {
 
   const handleEditClick = (member) => {
     setIsEditing(true);
-    setCurrentTeamMember(member);
+    // Ensure the category is capitalized to match dropdown values
+    const capitalizedCategory = member.category.charAt(0).toUpperCase() + member.category.slice(1);
+    setCurrentTeamMember({
+      ...member,
+      category: capitalizedCategory,
+    });
+
     if (member.image) {
       setImagePreview(`${MEDIA_BASE_URL}${member.image}`);
     } else {
