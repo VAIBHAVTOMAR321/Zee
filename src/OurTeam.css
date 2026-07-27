@@ -1,0 +1,17 @@
+/* You can add specific styles for OurTeam component here if needed,
+   or reuse styles from AllProjects.css if they are generic enough. */
+
+/* Example: Adjust table column width for description if it gets too long */
+.team-members-table .desc-cell {
+  max-width: 250px; /* Adjust as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Ensure images in table are well-aligned */
+.team-members-table img {
+  vertical-align: middle;
+}
+
+/* Add any other specific styles for OurTeam here */

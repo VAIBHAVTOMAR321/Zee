@@ -25,7 +25,8 @@ import {
   FaQuestionCircle,
   FaTrophy,
   FaBriefcase,
-  FaGraduationCap,
+  FaGraduationCap, 
+  FaUsersCog, // Added for Our Team icon
   FaTasks,
   FaClock
 } from "react-icons/fa";
@@ -91,6 +92,11 @@ const AdminLeftnav = ({ sidebarOpen, setSidebarOpen, isMobile, isTablet, onNavCl
         icon: <FaProjectDiagram />,
         label: "Our Projects",
         path: "/AllProjects",
+      },
+      {
+        icon: <FaUsersCog />, // Using FaUsersCog for Our Team
+        label: "Our Team",
+        path: "/OurTeam", // New path for OurTeam component
       },
       {
         icon: <FaQuestionCircle />,

@@ -27,6 +27,7 @@ import AdminDashboard from "./components/admin_pannel/AdminDashboard";
 import AllServices from "./AllServices";
 import AllProducts from "./AllProducts";
 import AllProjects from "./AllProjects";
+import OurTeam from "./OurTeam"; // Import the new OurTeam component
 import Query from "./Query";
 import ProtectedRoute from "./components/all_login/ProtectedRoute";
 
@@ -34,7 +35,7 @@ import ProtectedRoute from "./components/all_login/ProtectedRoute";
 function AppContent() {
   const location = useLocation();
 
-  const hideNavbarRoutes = [ "/AdminDashboard", "/AllServices", "/AllProducts", "/AllProjects", "/Query"];
+  const hideNavbarRoutes = [ "/AdminDashboard", "/AllServices", "/AllProducts", "/AllProjects", "/OurTeam", "/Query"];
   const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
 
   return (
@@ -66,6 +67,11 @@ function AppContent() {
           <Route path="/AllServices" element={
             <ProtectedRoute>
               <AllServices />
+            </ProtectedRoute>
+          } />
+          <Route path="/OurTeam" element={
+            <ProtectedRoute>
+              <OurTeam />
             </ProtectedRoute>
           } />
           <Route path="/Query" element={
