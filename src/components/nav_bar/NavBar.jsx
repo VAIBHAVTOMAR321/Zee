@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../all_login/LanguageContext";
@@ -40,10 +41,20 @@ function NavBar() {
               {language === 'hi' ? 'होम' : 'Home'}
             </Nav.Link>
 
-            <Nav.Link as={Link} to="/about" className="nav-link-item" onClick={() => setExpanded(false)}>
-              <span className="nav-link-dot"></span>
-              {language === 'hi' ? 'हमारे बारे में' : 'About Us'}
-            </Nav.Link>
+            <NavDropdown title={<>
+                <span className="nav-link-dot"></span>
+                {language === 'hi' ? 'हमारे बारे में' : 'About Us'}
+              </>} 
+              id="about-us-dropdown" 
+              className="nav-link-item"
+            >
+              <NavDropdown.Item as={Link} to="/about" onClick={() => setExpanded(false)}>Our Company</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Header>Our Team</NavDropdown.Header>
+              <NavDropdown.Item as={Link} to="/team/Administrator" onClick={() => setExpanded(false)}>Administrator</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/team/Marketing" onClick={() => setExpanded(false)}>Marketing</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/team/Developer" onClick={() => setExpanded(false)}>Developer</NavDropdown.Item>
+            </NavDropdown>
 
             <Nav.Link as={Link} to="/services" className="nav-link-item" onClick={() => setExpanded(false)}>
               <span className="nav-link-dot"></span>

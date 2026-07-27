@@ -27,6 +27,7 @@ import AdminDashboard from "./components/admin_pannel/AdminDashboard";
 import AllServices from "./AllServices";
 import AllProducts from "./AllProducts";
 import AllProjects from "./AllProjects";
+import TeamCategory from "./TeamCategory"; // Import the new component
 import OurTeam from "./OurTeam"; // Import the new OurTeam component
 import Query from "./Query";
 import ProtectedRoute from "./components/all_login/ProtectedRoute";
@@ -47,6 +48,7 @@ function AppContent() {
           <Route path="/services" element={<Services />} />
           <Route path="/products" element={<Products />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/team/:category" element={<TeamCategory />} />
           <Route path="/contact" element={<Contact />} />
 
           <Route path="/AdminDashboard" element={
